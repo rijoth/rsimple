@@ -19,7 +19,7 @@ $ git clone https://github.com/rijoth/rsimple.git
 Next, open config.toml in the base of the Hugo site and ensure the theme option is set to rsimple:
 ```bash
 theme = "rsimple"
-
+```
 
 # Site Configuration
 Take a look in the `exampleSite` folder.
