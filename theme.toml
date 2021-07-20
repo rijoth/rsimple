@@ -1,0 +1,14 @@
+name = "rsimple"
+license = "MIT"
+licenselink = "https://github.com/rijoth/rsimple/blob/main/LICENSE"
+description = "RSimple is an hugo theme based on gruvbox color scheme"
+homepage = "https://github.com/rijoth/rsimple"
+tags = ["blog", "technical", "personal", "GruvBox"]
+features = ["blog", "technical", "personal"]
+min_version = "0.85"
+
+demosite = "https://rsimple-theme.netlify.app/"
+
+[author]
+    name = "Rijo Thomas"
+    homepage = "https://github.com/rijoth"

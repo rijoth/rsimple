@@ -1,0 +1,19 @@
+<!--single post tags-->
+
+<div class="d-flex justify-content-center">
+{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+<ul>
+  {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+  $taxonomy $tag) -}}
+    <a href="{{ .Permalink }}"><span class="badge">{{ $tag | urlize }}</span></a>
+  {{- end -}} {{- end -}}
+</ul>
+{{ end }}
+</div>
+
+<style>
+    .badge {
+        background-color:#458588;
+        color: #fbf1c7;;
+    }
+</style>

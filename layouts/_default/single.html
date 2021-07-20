@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">   
+            <h2 class="post-title">{{ .Title }}</h2>
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">Published {{ dateFormat (default "Mon, Jan 2, 2006" .Site.Params.dateFormat) .Date }}</time>
+        </div>
+        <div class="card-body">
+            <p class="text-justify">{{ .Content }}</p>
+        </div>
+    </div>    
+</div>
+
+{{ partial "post-tag.html" .}}
+
+{{ partial "socialshare.html" . }}
+
+{{ partial "footer.html" . }}
+
+
+<style>
+    .card {
+        background: #fbf1c7;
+    }
+    .card-body {
+        color: #282828;
+    }
+    .post-title {
+        color: #458588;
+        font-weight: bolder;
+    }
+
+    .post-date {
+        color: #928374;
+    }
+</style>

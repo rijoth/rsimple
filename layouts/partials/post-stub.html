@@ -1,0 +1,44 @@
+<a class = "post-link" href="{{ .Permalink }}">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2> {{ .Title }} </h2>
+        </div>
+        <div class="card-body">
+            <p class="text-justify">{{ .Summary }}</p>
+        </div>
+        <div class="card-footer">
+            <time class="text-center" datetime="{{ .Date.Format "2006-01-02" }}"><i class="fas fa-calendar">&nbsp</i>{{ dateFormat (default "Mon, Jan 2, 2006" .Site.Params.dateFormat) .Date }}</time>       
+        </div>
+    </div>  
+</a>  
+
+
+<style>
+.card {
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 1.5em;
+    background: #fbf1c7;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.post-link {
+    text-decoration: none;
+}
+.card-header {
+    color: #458588;
+}
+.card-body {
+    color: #282828;
+}
+.card-footer {
+    color: #928374;
+}
+time {
+    color: #928374;
+    text-align: center;
+}
+</style>

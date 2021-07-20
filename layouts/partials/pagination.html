@@ -1,0 +1,61 @@
+<!-- {{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+    <nav class="pagination" role="navigation">
+        <ul class="pagination">
+            <span class="page-number">Page {{ $pag.PageNumber }} of {{ $pag.TotalPages }}</span>
+            {{ if $pag.HasPrev }}
+                <li class="page-item">
+                    <a class="newer-posts btn btn-success" href="{{ $pag.Prev.URL }}">&larr; Newer Posts</a>
+                </li>
+            {{ end }}
+            {{ if $pag.HasNext }}
+                <li class="page-item">
+                    <a class="older-posts btn btn-success" href="{{ $pag.Next.URL }}">Older Posts &rarr;</a>
+                </li>    
+            {{ end }}
+        </ul>    
+    </nav>
+
+{{ end }} -->
+
+
+<div class="container">
+  {{ $pag := $.Paginator }}
+  {{ if gt $pag.TotalPages 1 }}
+  <nav>
+      <ul class="pagination" role="navigation">
+          &nbsp; &nbsp;
+      {{ if $pag.HasPrev }}
+        <li class="page-item">
+          <a class="page-link" href="{{ $pag.Prev.URL }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+      {{ end }}
+      <li class="page-item" style="color: #928374;">&nbsp; Page {{ $pag.PageNumber }} of {{ $pag.TotalPages }} &nbsp;</li>
+      {{ if $pag.HasNext }}
+        <li class="page-item">
+          <a class="page-link" href="{{ $pag.Next.URL }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }} 
+</div>
+
+<style>
+    .page-link{
+        background-color: #458588;
+        border-color: #458588;;
+        color: #282828;
+    }
+    .page-link:hover {
+      background-color: #d65d0e;
+      border-color: #d65d0e;
+      color: #282828;
+    }
+</style>

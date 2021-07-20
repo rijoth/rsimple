@@ -1,0 +1,60 @@
+baseurl = ""
+title = "My blog"
+theme = "rsimple"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+
+[taxonomies]
+  tag = "tags"
+
+
+[Params]
+    mainSections = ["post"]
+    intro = true
+    headline = "My headline"
+    description = "My description"
+    github = "<YOUR URL HERE>"
+    twitter = "<YOUR URL HERE>"
+    instagram = "<YOUR URL HERE>"
+    linkedin = "<YOUR URL HERE>"
+    email = "<YOUR EMAIL HERE>"
+    opengraph = true
+    dateFormat = "Mon, Jan 2, 2021"
+
+[Permalinks]
+    post = "/:filename/"
+
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fas fa-home'></i>"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Posts"
+    pre = "<i class='fas fa-pen-square'></i>"
+    url = "/post/"
+    weight = 2
+
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fas fa-info'></i>"
+    url = "/page/about/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Project"
+    pre = "<i class='fas fa-tasks'></i>"
+    url = "/project/"
+    weight = 4
+    
+  [[menu.main]]
+    name = "Tags"
+    pre = "<i class='fas fa-tags'></i>"
+    url = "/tags/"
+    weight = 5
+
+
