@@ -1,6 +1,6 @@
 # RSimple
 
-RSimple is a clean, elegant and simple blog theme with gruvbox color scheme.
+RSimple is a clean, elegant and simple Hugo blog theme with gruvbox color scheme.
 
 ![hugo-theme-rsimple](https://github.com/rijoth/rsimple/blob/master/images/screenshot.png)
 
